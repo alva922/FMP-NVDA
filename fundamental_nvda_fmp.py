@@ -20,6 +20,7 @@ print(msft_info_df)
 tesla_info_df=fmp_api.get_financial_data(symbol='NVDA', report_type='balance_statement', period='annual', limit=10)
 print(tesla_info_df)
 tesla_price_df=fmp_api.get_daily_prices(symbol='NVDA')
+tesla_price_df.to_csv('nvda_stock_price_2019_2024.csv', sep='\t', encoding='utf-8')
 fmp_api.draw_chart(tesla_price_df)
 # 
 # fig1
